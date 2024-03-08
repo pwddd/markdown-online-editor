@@ -5,9 +5,9 @@
   "private": true,
   "description": "📝基于 Vue、Vditor，所构建的在线 Markdown 编辑器，支持流程图、甘特图、时序图、任务列表、HTML 自动转换为 Markdow等功能。",
   "scripts": {
-    "start": "yarn serve",
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && yarn serve",
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --open",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "watcher": "onchange \"src/**/**/*.{js,css,scss,vue}\" -- prettier --write {{changed}}",
     "prettier": "prettier --write \"src/**/**/*.{js,css,scss,vue}\"",
     "lint": "vue-cli-service lint",
